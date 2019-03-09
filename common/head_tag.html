@@ -1,0 +1,56 @@
+<script type="text/discourse-plugin" version="0.8.18">
+  api.registerConnectorClass('bread-crumbs-right', 'topic-status-filter', {
+    shouldRender(args, component) {
+      const ids = settings.enabled_categories.split("|");
+      
+      if (ids.length == 0) {
+        return true;
+      }
+
+      const controller = Discourse.__container__.lookup("controller:navigation/category");
+      if (controller && controller.category) {
+        return ids.includes(controller.category.id.toString());
+      }
+
+      return false;
+    },
+
+    setupComponent(args, component) {
+      const statuses = ["all", "open", "closed"].map(status => {
+        return { name: I18n.t(themePrefix(`topic_status_filter.${status}`)), value: status };
+      });
+      component.set("statuses", statuses);
+
+      const queryStrings = window.location.search;
+      if (queryStrings.match(/status=open/)) {
+        component.set("status", "open");
+      } else if (queryStrings.match(/status=closed/)) {
+        component.set("status", "closed");
+      } else {
+        component.set("status", "all");
+      }
+    },
+
+    actions: {
+      changeStatus(newStatus) {
+        let location = window.location;
+        let queryStrings = location.search;
+        let params = queryStrings.startsWith("?") ? queryStrings.substr(1).split("&") : [];
+
+        params = params.filter(param => {
+          return !param.startsWith("status=");
+        });
+
+        if (newStatus && newStatus !== "all") {
+          params.push(`status=${newStatus}`);
+        }
+
+        queryStrings = params.length > 0 ? `?${params.join("&")}` : "";
+        window.location.assign(`${location.origin}${location.pathname}${queryStrings}${location.hash}`);
+      }
+    }
+  });
+</script>
+<script type="text/x-handlebars" data-template-name="/connectors/bread-crumbs-right/topic-status-filter">
+  {{combo-box content=statuses value=status valueAttribute="value" onSelect=(action "changeStatus")}}
+</script>

@@ -1,0 +1,4 @@
+enabled_categories:
+  type: list
+  list_type: category
+  default: ""

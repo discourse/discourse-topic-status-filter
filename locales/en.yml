@@ -1,0 +1,5 @@
+en:
+  topic_status_filter:
+    all: "all"
+    open: "open"
+    closed: "closed"
