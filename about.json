@@ -1,5 +1,6 @@
 {
   "name": "Discourse Topic Status Filter",
-  "about_url": null,
-  "license_url": null
+  "component": true,
+  "about_url": "https://github.com/discourse/discourse-topic-status-filter",
+  "license_url": "https://github.com/discourse/discourse-topic-status-filter/blob/master/LICENSE"
 }
