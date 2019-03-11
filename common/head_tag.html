@@ -46,7 +46,8 @@
         }
 
         queryStrings = params.length > 0 ? `?${params.join("&")}` : "";
-        window.location.assign(`${location.origin}${location.pathname}${queryStrings}${location.hash}`);
+        const DiscourseUrl = require("discourse/lib/url").default;
+        DiscourseUrl.routeTo(`${location.pathname}${queryStrings}${location.hash}`);
       }
     }
   });
