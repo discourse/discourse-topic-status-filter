@@ -1,7 +1,7 @@
 <script type="text/discourse-plugin" version="0.8.18">
   api.registerConnectorClass('bread-crumbs-right', 'topic-status-filter', {
     shouldRender(args, component) {
-      const ids = settings.enabled_categories.split("|");
+      const ids = settings.enabled_categories.split("|").filter(n => n);
       
       if (ids.length == 0) {
         return true;
