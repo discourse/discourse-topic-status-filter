@@ -7,9 +7,9 @@
         return true;
       }
 
-      const controller = Discourse.__container__.lookup("controller:navigation/category");
-      if (controller && controller.category) {
-        return ids.includes(controller.category.id.toString());
+      const category = component.get("parentView.category");
+      if (category) {
+        return ids.includes(category.id.toString());
       }
 
       return false;
