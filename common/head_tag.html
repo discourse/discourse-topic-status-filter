@@ -2,7 +2,7 @@
   api.registerConnectorClass('bread-crumbs-right', 'topic-status-filter', {
     shouldRender(args, component) {
       const ids = settings.enabled_categories.split("|").filter(n => n);
-      
+
       if (ids.length == 0) {
         return true;
       }
@@ -53,5 +53,11 @@
   });
 </script>
 <script type="text/x-handlebars" data-template-name="/connectors/bread-crumbs-right/topic-status-filter">
-  {{combo-box content=statuses value=status valueAttribute="value" onSelect=(action "changeStatus")}}
+  {{combo-box
+    content=statuses
+    value=status
+    valueAttribute="value"
+    onSelect=(action "changeStatus")
+    class="topic-status-filter-dropdown"
+  }}
 </script>
