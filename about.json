@@ -2,5 +2,5 @@
   "name": "Discourse Topic Status Filter",
   "component": true,
   "about_url": "https://github.com/discourse/discourse-topic-status-filter",
-  "license_url": "https://github.com/discourse/discourse-topic-status-filter/blob/master/LICENSE"
+  "license_url": "https://github.com/discourse/discourse-topic-status-filter/blob/main/LICENSE"
 }
