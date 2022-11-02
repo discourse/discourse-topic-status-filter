@@ -16,8 +16,12 @@ export default class TopicStatusFilterComponenent extends Component {
   }
 
   get status() {
-    const currentStatus =
-      this.router.currentRoute.attributes?.modelParams?.status;
+    const routeAttributes = this.router.currentRoute.attributes;
+    let currentStatus;
+
+    currentStatus = routeAttributes?.modelParams?.status; // Regular topic lists
+    currentStatus ??= routeAttributes?.list?.listParams?.status; // Tag topic lists
+
     if (["open", "closed"].includes(currentStatus)) {
       return currentStatus;
     } else {
