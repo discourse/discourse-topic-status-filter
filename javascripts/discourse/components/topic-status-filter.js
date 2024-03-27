@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
-import I18n from "I18n";
-import { inject as service } from "@ember/service";
 import { action } from "@ember/object";
+import { service } from "@ember/service";
+import I18n from "I18n";
 
 export default class TopicStatusFilterComponenent extends Component {
   @service router;
