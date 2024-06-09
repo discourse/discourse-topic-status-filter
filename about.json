@@ -1,6 +1,6 @@
 {
-  "name": "Discourse Topic Status Filter",
+  "name": "Topic Status Filter",
   "component": true,
-  "about_url": "https://github.com/discourse/discourse-topic-status-filter",
+  "about_url": "https://meta.discourse.org/t/topic-status-filter/111307",
   "license_url": "https://github.com/discourse/discourse-topic-status-filter/blob/main/LICENSE"
 }
