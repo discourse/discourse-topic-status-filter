@@ -3,7 +3,7 @@ import { action } from "@ember/object";
 import { service } from "@ember/service";
 import I18n from "I18n";
 
-export default class TopicStatusFilterComponenent extends Component {
+export default class TopicStatusFilterComponent extends Component {
   @service router;
 
   get statuses() {
