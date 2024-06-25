@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 he:
+  topic_status_filter:
+    all: "הכול"
+    open: "פתוח"
+    closed: "סגור"
