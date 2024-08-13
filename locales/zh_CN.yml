@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  topic_status_filter:
+    all: "所有"
+    open: "开放"
+    closed: "已关闭"

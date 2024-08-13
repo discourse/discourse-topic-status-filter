@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 fi:
+  topic_status_filter:
+    all: "kaikki"
+    open: "avoinna"
+    closed: "suljettu"
