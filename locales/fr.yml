@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 fr:
+  topic_status_filter:
+    all: "tout"
+    open: "ouvert"
+    closed: "fermé"
