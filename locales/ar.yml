@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 ar:
+  topic_status_filter:
+    all: "الكل"
+    open: "مفتوح"
+    closed: "مغلق"
