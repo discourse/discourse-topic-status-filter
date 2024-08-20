@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 tr_TR:
+  topic_status_filter:
+    all: "tümü"
+    open: "açık"
+    closed: "kapalı"
