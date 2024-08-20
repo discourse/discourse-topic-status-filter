@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 ru:
+  topic_status_filter:
+    all: "все"
+    open: "открытые"
+    closed: "закрытые"
