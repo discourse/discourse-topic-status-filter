@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 ro:
+  topic_status_filter:
+    all: "toate"
+    open: "deschise"
+    closed: "închise"
