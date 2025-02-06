@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
 import { service } from "@ember/service";
-import I18n from "I18n";
+import { i18n } from "discourse-i18n";
 
 export default class TopicStatusFilterComponent extends Component {
   @service router;
@@ -9,7 +9,7 @@ export default class TopicStatusFilterComponent extends Component {
   get statuses() {
     return ["all", "open", "closed"].map((status) => {
       return {
-        name: I18n.t(themePrefix(`topic_status_filter.${status}`)),
+        name: i18n(themePrefix(`topic_status_filter.${status}`)),
         value: status,
       };
     });
