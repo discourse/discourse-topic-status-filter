@@ -5,3 +5,7 @@
 # https://translate.discourse.org/
 
 vi:
+  topic_status_filter:
+    all: "Tất cả"
+    open: "Mở"
+    closed: "Đóng"
